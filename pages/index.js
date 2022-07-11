@@ -130,7 +130,7 @@ export default function Home({ posts }) {
         </figure>
         <h2 className="text-center font-light text-slate-700">Let’s Work Together</h2>
         <p>
-          Hi, my name is Faruk{/* Rainbow Dragon Supernova */}, and I’m a{' '}
+          Hi, my name is Faruk {/* Rainbow Dragon Supernova */} Ateş, and I’m a{' '}
           <nobr className="lf">Love First Person</nobr>. It’s like a regular person, but with the
           explicit statement of wanting to build a better world, with Love as the foundation.
         </p>
