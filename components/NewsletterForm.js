@@ -31,7 +31,7 @@ const NewsletterForm = ({ title = 'The Newsletter' }) => {
     inputEl.current.value = ''
     setError(false)
     setSubscribed(true)
-    setMessage('Successfully! 🎉 You are now subscribed.')
+    setMessage('Successfully! 🎉  Remember to confirm your subscription!')
   }
 
   return (
@@ -48,7 +48,7 @@ const NewsletterForm = ({ title = 'The Newsletter' }) => {
             className="w-full rounded-md px-4 placeholder:text-slate-400 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-pink-300"
             id="email-input"
             name="email"
-            placeholder={subscribed ? 'You’re subscribed !  🎉' : 'Enter your email'}
+            placeholder={subscribed ? 'Check your inbox!  🎉' : 'Enter your email'}
             ref={inputEl}
             required
             type="email"
