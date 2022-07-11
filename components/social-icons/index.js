@@ -4,6 +4,7 @@ import Facebook from './facebook.svg'
 import Youtube from './youtube.svg'
 import Linkedin from './linkedin.svg'
 import Twitter from './twitter.svg'
+import Instagram from './instagram.svg'
 
 // Icons taken from: https://simpleicons.org/
 
@@ -14,6 +15,17 @@ const components = {
   youtube: Youtube,
   linkedin: Linkedin,
   twitter: Twitter,
+  instagram: Instagram,
+}
+
+const brandColors = {
+  mail: 'hover:text-[#fa1982] focus:text-[#fa1982]',
+  github: 'hover:text-[#24292e] focus:text-[#24292e]',
+  facebook: 'hover:text-[#3b5998] focus:text-[#3b5998]',
+  youtube: 'hover:text-[#e52d27] focus:text-[#e52d27]',
+  linkedin: 'hover:text-[#2867B2] focus:text-[#2867B2]',
+  twitter: 'hover:text-[#1DA1F2] focus:text-[#1DA1F2]',
+  instagram: 'hover:text-[#E4405F] focus:text-[#E4405F]',
 }
 
 const SocialIcon = ({ kind, href, size = 8 }) => {
@@ -22,17 +34,17 @@ const SocialIcon = ({ kind, href, size = 8 }) => {
 
   const SocialSvg = components[kind]
 
+  let color = brandColors[kind]
+
   return (
     <a
-      className="text-sm text-gray-500 transition hover:text-gray-600"
+      className={`text-sm ${color} rounded-sm text-slate-400 transition focus:outline-none focus:ring-1 focus:ring-current focus:ring-offset-2 focus:saturate-100`}
       target="_blank"
       rel="noopener noreferrer"
       href={href}
     >
       <span className="sr-only">{kind}</span>
-      <SocialSvg
-        className={`fill-current text-gray-700 hover:text-blue-500 dark:text-gray-200 dark:hover:text-blue-400 h-${size} w-${size}`}
-      />
+      <SocialSvg className={`fill-current h-${size} w-${size}`} />
     </a>
   )
 }

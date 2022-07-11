@@ -1,0 +1,75 @@
+/* global.css */
+html {
+  background: #fff url(/static/images/goinglovefirst-background.jpeg) 50% 0% no-repeat;
+  background-size: cover;
+}
+
+/* Common element styles */
+a {
+  /* @apply focus:outline-none focus:ring-1 focus:ring-pink-400 focus:ring-offset-0; */
+  @apply transition-colors duration-100 ease-out;
+}
+nobr {
+  @apply lowercase text-pink-900 transition-colors duration-100;
+
+  &.lf {
+    @apply font-medium capitalize text-pink-400;
+  }
+
+  &:not(.lf):hover {
+    @apply text-slate-500;
+  }
+}
+
+.prose {
+  @apply text-slate-600;
+  max-width: 64ch;
+
+  /* prose test for links on headings */
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    .tooltip {
+      @apply sr-only rounded bg-slate-800/80 text-slate-200 opacity-0 transition-opacity delay-200 duration-300;
+    }
+    &:target {
+      @apply underline decoration-yellow-200 decoration-wavy decoration-from-font underline-offset-2;
+    }
+    &:hover [aria-hidden='true'] {
+      background: url('/static/icons/link.svg') 50% 50% no-repeat;
+      background-size: 1.5rem 1.5rem;
+      @apply absolute -ml-8 h-8 w-8 no-underline;
+
+      &:hover .tooltip {
+        @apply not-sr-only absolute -top-6 -left-1/2 px-2 py-1 text-xs opacity-100;
+      }
+    }
+  }
+
+  /* scroll margins */
+  /* h1,
+  h2 {
+    @apply pt-12;
+  }
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply pt-8;
+  } */
+
+  /* a:not(.permalink):hover,
+  a:not(.permalink):focus {
+    @apply decoration-pink-200 decoration-double decoration-from-font;
+  } */
+}
+
+/* # permalinks, span.icon = after headings */
+.prose .permalink {
+  @apply font-normal text-slate-600 no-underline hover:text-slate-800;
+}
+.permalink .icon {
+  @apply ml-1 text-[89%] text-slate-300 no-underline hover:text-slate-500 hover:opacity-100;
+}

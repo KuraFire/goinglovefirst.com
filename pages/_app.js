@@ -1,8 +1,11 @@
 import '@/css/tailwind.css'
 import '@/css/prism.css'
-import 'katex/dist/katex.css'
+// import 'katex/dist/katex.css'
+import '@/css/global.css'
 
-import '@fontsource/inter/variable-full.css'
+// import '@fontsource/inter/variable-full.css'
+import '@fontsource/source-serif-4'
+import '@fontsource/source-sans-3'
 
 import { ThemeProvider } from 'next-themes'
 import Head from 'next/head'

@@ -13,19 +13,21 @@ export default function Footer() {
           <SocialIcon kind="youtube" href={siteMetadata.youtube} size="6" />
           <SocialIcon kind="linkedin" href={siteMetadata.linkedin} size="6" />
           <SocialIcon kind="twitter" href={siteMetadata.twitter} size="6" />
+          <SocialIcon kind="instagram" href={siteMetadata.instagram} size="6" />
         </div>
-        <div className="mb-2 flex space-x-2 text-sm text-gray-500 dark:text-gray-400">
-          <div>{siteMetadata.author}</div>
-          <div>{` • `}</div>
-          <div>{`© ${new Date().getFullYear()}`}</div>
-          <div>{` • `}</div>
-          <Link href="/">{siteMetadata.title}</Link>
+        <div className="mb-8 flex space-x-2 divide-x divide-slate-200 text-sm text-slate-500">
+          <div>
+            {`© ${new Date().getFullYear()}`} {siteMetadata.author}
+          </div>
+          <Link href="/" className="pl-2 hover:text-pink-400">
+            {siteMetadata.title}
+          </Link>
         </div>
-        <div className="mb-8 text-sm text-gray-500 dark:text-gray-400">
+        {/* Based on:
           <Link href="https://github.com/timlrx/tailwind-nextjs-starter-blog">
             Tailwind Nextjs Theme
           </Link>
-        </div>
+          */}
       </div>
     </footer>
   )

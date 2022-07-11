@@ -6,23 +6,31 @@ export default function FourZeroFour() {
   return (
     <>
       <PageSEO title={`Page Not Found - ${siteMetadata.title}`} />
-      <div className="flex flex-col items-start justify-start md:mt-24 md:flex-row md:items-center md:justify-center md:space-x-6">
-        <div className="space-x-2 pt-6 pb-8 md:space-y-5">
-          <h1 className="text-6xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 md:border-r-2 md:px-6 md:text-8xl md:leading-14">
+      <div className="my-12 flex flex-col items-start justify-start md:flex-row md:items-center md:justify-center md:space-x-6">
+        <div className="space-x-2 pt-0 pb-8 md:space-y-5">
+          <h1 className="bg-gradient-to-br from-slate-300 to-slate-600 bg-clip-text text-4xl font-extrabold leading-9 tracking-tight text-transparent  md:border-r-2 md:px-6 md:text-6xl md:leading-14">
             404
           </h1>
         </div>
         <div className="max-w-md">
-          <p className="mb-4 text-xl font-bold leading-normal md:text-2xl">
-            Sorry we couldn't find this page.
+          <p className="mb-4 text-xl font-semibold leading-normal text-slate-700 md:text-2xl">
+            We couldn’t find this page… yet?
           </p>
           <p className="mb-8">
-            But dont worry, you can find plenty of other things on our homepage.
+            For now, return to our homepage, or{' '}
+            <Link
+              href="https://twitter.com/intent/tweet?text=@KuraFire"
+              className="text-blue-600 hover:text-pink-500 focus:text-pink-700"
+            >
+              message @KuraFire on Twitter
+            </Link>{' '}
+            if you think this page should exist!
           </p>
-          <Link href="/">
-            <button className="focus:shadow-outline-blue inline rounded-lg border border-transparent bg-blue-600 px-4 py-2 text-sm font-medium leading-5 text-white shadow transition-colors duration-150 hover:bg-blue-700 focus:outline-none dark:hover:bg-blue-500">
-              Back to homepage
-            </button>
+          <Link
+            href="/"
+            className="focus:ring-indigo-500 inline-flex items-center rounded-md bg-pink-50 px-4 py-2 text-sm font-semibold text-pink-800 shadow  shadow-pink-400/10 hover:bg-pink-100 hover:text-pink-900 focus:outline-none focus:ring-2 focus:ring-pink-200 focus:ring-offset-1"
+          >
+            Back to homepage
           </Link>
         </div>
       </div>
