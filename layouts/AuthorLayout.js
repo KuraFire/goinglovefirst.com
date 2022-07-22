@@ -30,7 +30,7 @@ export default function AuthorLayout({ children, frontMatter }) {
           <div className="flex flex-col items-center pt-8">
             <Image
               src={flexAvatar}
-              alt="avatar"
+              alt="Photo of Faruk"
               width="192px"
               height="207px"
               className="h-auto w-48"
