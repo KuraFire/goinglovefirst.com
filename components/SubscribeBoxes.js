@@ -1,4 +1,5 @@
 import NewsletterForm from '@/components/NewsletterForm'
+import Image from 'next/image'
 
 export default function SubscribeBoxes({ children }) {
   return (
@@ -7,7 +8,14 @@ export default function SubscribeBoxes({ children }) {
       {/* The Newsletter */}
       <div className="group flex flex-col overflow-hidden rounded-lg shadow-lg transition duration-100 focus-within:scale-105 hover:scale-105">
         <picture className="flex-shrink-0">
-          <img className="h-48 w-full object-cover" src="/static/images/heart-mail.jpeg" alt="" />
+          {/* <img className="h-48 w-full object-cover" src="/static/images/heart-mail.jpeg" alt="" /> */}
+          <Image
+            className="h-48 w-full object-cover"
+            width="2100"
+            height="1181"
+            src="/static/images/heart-mail.jpeg"
+            alt=""
+          />
         </picture>
         <div className="flex flex-1 flex-col justify-between bg-white p-6">
           <div className="flex-1">
@@ -23,7 +31,14 @@ export default function SubscribeBoxes({ children }) {
         className="flex  flex-col overflow-hidden rounded-lg shadow-lg transition duration-100 hover:scale-105 focus:scale-105"
       >
         <picture className="flex-shrink-0">
-          <img className="h-48 w-full object-cover" src="/static/images/love-is-tree.jpeg" alt="" />
+          {/* <img className="h-48 w-full object-cover" src="/static/images/love-is-tree.jpeg" alt="" /> */}
+          <Image
+            className="h-48 w-full object-cover"
+            width="2100"
+            height="1181"
+            src="/static/images/love-is-tree.jpeg"
+            alt=""
+          />
         </picture>
         <div className="flex flex-1 flex-col justify-between bg-white p-6">
           <div className="flex-1">
