@@ -9,7 +9,7 @@ const siteMetadata = {
   siteRepo: 'https://github.com/kurafire/goinglovefirst.com',
   siteLogo: '/static/images/logo.png',
   image: '/static/images/avatar.jpeg',
-  socialBanner: '/static/images/twitter-card.png',
+  socialBanner: '/static/images/open-graph.png',
   email: '',
   // github: 'https://github.com',
   twitter: 'https://twitter.com/KuraFire',
