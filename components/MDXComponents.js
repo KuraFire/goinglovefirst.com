@@ -4,6 +4,7 @@ import { getMDXComponent } from 'mdx-bundler/client'
 import Image from './Image'
 import CustomLink from './Link'
 import Heading from './Heading'
+import BlockCallout from './BlockCallout'
 import TOCInline from './TOCInline'
 import Pre from './Pre'
 import { BlogNewsletterForm } from './NewsletterForm'
@@ -14,6 +15,7 @@ export const MDXComponents = {
   a: CustomLink,
   // h2: Heading,
   pre: Pre,
+  // blockquote: BlockCallout,
   BlogNewsletterForm: BlogNewsletterForm,
   wrapper: ({ components, layout, ...rest }) => {
     const Layout = require(`../layouts/${layout}`).default

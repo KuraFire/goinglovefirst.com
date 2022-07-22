@@ -11,7 +11,7 @@ import ThemeSwitch from './ThemeSwitch'
 const LayoutWrapper = ({ children }) => {
   return (
     <SectionContainer>
-      <div className="flex h-screen scroll-mt-12 flex-col justify-between">
+      <div className="-mb-8 flex min-h-[89vh] scroll-mt-12 flex-col justify-between">
         <header className="flex items-center justify-between pt-6 pb-12">
           <div>
             <Link href="/" aria-label={siteMetadata.headerTitle} className="group">
@@ -31,7 +31,7 @@ const LayoutWrapper = ({ children }) => {
           </div>
           <div className="flex items-center text-base leading-5">
             <div className="hidden sm:block">
-              {/* {headerNavLinks.map((link) => (
+              {headerNavLinks.map((link) => (
                 <Link
                   key={link.title}
                   href={link.href}
@@ -39,10 +39,10 @@ const LayoutWrapper = ({ children }) => {
                 >
                   {link.title}
                 </Link>
-              ))} */}
+              ))}
             </div>
             {/* <ThemeSwitch /> */}
-            {/* <MobileNav /> */}
+            <MobileNav />
           </div>
         </header>
         <main className="mx-auto mb-28 w-full rounded-md bg-gray-50 px-4 py-8 shadow-md sm:px-6 lg:px-8 lg:py-12">

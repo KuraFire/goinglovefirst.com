@@ -1,7 +1,7 @@
 const headerNavLinks = [
-  // { href: '/about', title: 'About' },
+  { href: '/about', title: 'About' },
   // { href: '/about/a-better-world', title: 'A Better World' },
-  // { href: '/about/for-all-of-us', title: 'For All Of Us' },
+  // { href: '/about/universal-love', title: 'Universal Love' },
 ]
 
 export default headerNavLinks

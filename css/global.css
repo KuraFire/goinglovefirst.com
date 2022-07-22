@@ -10,14 +10,14 @@ a {
   @apply transition-colors duration-100 ease-out;
 }
 nobr {
-  @apply lowercase text-pink-900 transition-colors duration-100;
+  @apply lowercase text-slate-900 transition-colors duration-100;
 
   &.lf {
     @apply font-medium capitalize text-pink-400;
   }
 
   &:not(.lf):hover {
-    @apply text-slate-500;
+    @apply cursor-help text-pink-400;
   }
 }
 

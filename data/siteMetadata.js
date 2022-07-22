@@ -1,8 +1,8 @@
 const siteMetadata = {
-  title: 'Love First',
+  title: 'Going Love First',
   author: 'Faruk Ateş',
   headerTitle: 'Love First',
-  description: 'A new source of Harmony',
+  description: 'A new Source of Harmony',
   language: 'en-us',
   theme: 'light', // system, dark or light
   siteUrl: 'https://goinglovefirst.com',

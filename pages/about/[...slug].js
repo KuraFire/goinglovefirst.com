@@ -8,7 +8,7 @@ import FourZeroFour from '@/components/404'
 const DEFAULT_LAYOUT = 'PostLayout'
 
 export async function getStaticPaths() {
-  const posts = getFiles('blog')
+  const posts = getFiles('about')
   return {
     paths: posts.map((p) => ({
       params: {
@@ -20,11 +20,11 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const allPosts = await getAllFilesFrontMatter('blog')
+  const allPosts = await getAllFilesFrontMatter('about')
   const postIndex = allPosts.findIndex((post) => formatSlug(post.slug) === params.slug.join('/'))
   const prev = allPosts[postIndex + 1] || null
   const next = allPosts[postIndex - 1] || null
-  const post = await getFileBySlug('blog', params.slug.join('/'))
+  const post = await getFileBySlug('about', params.slug.join('/'))
   const authorList = post.frontMatter.authors || ['default']
   const authorPromise = authorList.map(async (author) => {
     const authorResults = await getFileBySlug('authors', [author])
@@ -44,6 +44,8 @@ export async function getStaticProps({ params }) {
 export default function Blog({ post, authorDetails, prev, next }) {
   const { mdxSource, toc, frontMatter } = post
 
+  // console.log(prev, next)
+
   return (
     <>
       {frontMatter.draft !== true ? (
@@ -58,14 +60,6 @@ export default function Blog({ post, authorDetails, prev, next }) {
         />
       ) : (
         <FourZeroFour />
-        // <div className="mt-24 text-center">
-        //   <PageTitle>
-        //     Under Construction{' '}
-        //     <span role="img" aria-label="roadwork sign">
-        //       🚧
-        //     </span>
-        //   </PageTitle>
-        // </div>
       )}
     </>
   )
