@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export default function SubscribeBoxes({ children }) {
   return (
-    <div className="mx-12 mt-12 -mb-36 grid gap-8 lg:grid-cols-2">
+    <div className="mx-1 mt-12 -mb-36 grid gap-8 md:mx-3 md:grid-cols-2">
       {/* <div className="mx-auto mt-12 -mb-36 grid max-w-lg gap-8 lg:-mx-24 lg:max-w-none lg:grid-cols-3"> */}
       {/* The Newsletter */}
       <div className="group flex flex-col overflow-hidden rounded-lg shadow-lg transition duration-100 focus-within:scale-105 hover:scale-105">

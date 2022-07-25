@@ -48,7 +48,7 @@ const NewsletterForm = ({ title = 'The Newsletter' }) => {
             className="w-full rounded-md px-4 placeholder:text-slate-400 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-pink-300"
             id="email-input"
             name="email"
-            placeholder={subscribed ? 'Check your inbox!  🎉' : 'Enter your email'}
+            placeholder={subscribed ? 'Confirm via your inbox!  🎉' : 'Enter your email'}
             ref={inputEl}
             required
             type="email"
