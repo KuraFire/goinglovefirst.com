@@ -1,10 +1,86 @@
 ---
-title: 'Start Here: A Love First Blog'
+title: 'Start Here'
 date: '2022-07-22'
 tags: []
-draft: true
+draft: false
 summary: This is where generic updates are posted.
 images: []
 layout: PageSimple
 canonicalUrl: https://goinglovefirst.com/blog/start-here
 ---
+
+Let's test the MDX functionality!
+
+---
+
+## Test 1
+
+First, with a blog-provided variable: `{props.toc}` for the inline TOC:
+
+### Code:
+
+```jsx
+<TOCInline toc={props.toc} />
+```
+
+### Output:
+
+<TOCInline toc={props.toc} />
+
+---
+
+## Test 2
+
+Stripping out headings that end in a colon:
+
+### Code:
+
+```jsx
+<TOCInline toc={props.toc} exclude=".*:$" />
+```
+
+### Output:
+
+<TOCInline toc={props.toc} exclude=".*:$" />
+
+---
+
+## Test 3
+
+Next, we're going to test importing a Component from the `@components` folder:
+
+### Code:
+
+```mdx
+import Tag from '@/components/Tag'
+
+<Tag text="love" />
+```
+
+### Output:
+
+What's interesting here is that this throws an Error, but does seem to work in terms of output:
+
+import Tag from '@/components/Tag'
+
+<Tag text="love" />
+
+## Test 4
+
+Testing a different Component:
+
+### Code:
+
+```mdx
+import ThemeSwitch from '@/components/ThemeSwitch'
+
+<ThemeSwitch />
+```
+
+### Output:
+
+import ThemeSwitch from '@/components/ThemeSwitch'
+
+<ThemeSwitch />
+
+## Conclusion
