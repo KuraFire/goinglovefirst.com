@@ -38,7 +38,7 @@ const NewsletterForm = ({ title = 'The Newsletter' }) => {
     <div className="mt-2 block">
       <p className="text-xl font-semibold text-gray-900">{title}</p>
       {/* <p className="my-3 text-base text-gray-500">Receive the latest updates in your inbox.</p> */}
-      <form className="mt-3 flex flex-col" onSubmit={subscribe}>
+      {/* <form className="mt-3 flex flex-col" onSubmit={subscribe}>
         <div>
           <label className="sr-only" htmlFor="email-input">
             Email address
@@ -69,7 +69,89 @@ const NewsletterForm = ({ title = 'The Newsletter' }) => {
       </form>
       {error && (
         <div className="w-72 pt-2 text-sm text-red-500 dark:text-red-400 sm:w-96">{message}</div>
-      )}
+      )} */}
+      <div id="revue-embed">
+        <form
+          action="http://newsletter.goinglovefirst.com/add_subscriber"
+          method="post"
+          id="revue-form"
+          name="revue-form"
+          target="_blank"
+        >
+          <div className="mt-4 mb-2 flex -space-x-px text-small">
+            <div className="revue-form-group relative w-1/2">
+              <input
+                className="peer w-full rounded-l-md border-gray-400 text-small placeholder-transparent transition-all"
+                placeholder="Email address…"
+                type="email"
+                name="member[email]"
+                id="member_email"
+                required
+              />
+              <label
+                htmlFor="member_email"
+                className="absolute left-2 -top-2.5 whitespace-nowrap bg-white px-1 text-xs text-gray-600 transition-all peer-placeholder-shown:top-2.5 peer-focus:-top-2.5 peer-focus:text-blue-600"
+              >
+                Email address{' '}
+                <span title="Required field" className="required -ml-0.5 text-red-300">
+                  *
+                </span>
+              </label>
+            </div>
+            <div className="revue-form-group relative w-1/4">
+              <input
+                className="peer w-full border-gray-400 text-small placeholder-transparent transition-all"
+                placeholder="First name…"
+                type="text"
+                name="member[first_name]"
+                id="member_first_name"
+              />
+              <label
+                htmlFor="member_first_name"
+                className="absolute left-2 -top-2.5 whitespace-nowrap bg-white px-1 text-xs text-gray-600 transition-all peer-placeholder-shown:top-2.5 peer-focus:-top-2.5 peer-focus:text-blue-600"
+              >
+                First name <span className="optional sr-only">(Optional)</span>
+              </label>
+            </div>
+            <div className="revue-form-group relative w-1/4">
+              <input
+                className="peer w-full rounded-r-md border-gray-400 text-small placeholder-transparent transition-all"
+                placeholder="Last…"
+                type="text"
+                name="member[last_name]"
+                id="member_last_name"
+              />
+              <label
+                htmlFor="member_last_name"
+                className="absolute left-2 -top-2.5 whitespace-nowrap bg-white px-1 text-xs text-gray-600 transition-all peer-placeholder-shown:top-2.5 peer-focus:-top-2.5 peer-focus:text-blue-600"
+              >
+                Last name <span className="optional sr-only">(Optional)</span>
+              </label>
+            </div>
+          </div>
+          <div
+            className="revue-form-actions flex flex-row-reverse items-center"
+            title="By subscribing, you agree with Revue’s Terms of Service and Privacy Policy."
+          >
+            <input
+              type="submit"
+              value="Subscribe ♥"
+              name="member[subscribe]"
+              id="member_submit"
+              className="inline-block rounded-md bg-pink-400 py-1.5 px-4 font-medium text-white shadow-sm shadow-pink-400/21 hover:bg-pink-700 focus:bg-pink-500 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-offset-2"
+            />
+            <div className="revue-form-footer grow space-x-1 text-xs text-gray-500">
+              <a target="_blank" href="https://www.getrevue.co/terms" rel="noreferrer">
+                Terms of Service
+              </a>
+              <span className="text-gray-300">•</span>
+              <a target="_blank" href="https://www.getrevue.co/privacy" rel="noreferrer">
+                Privacy Policy
+              </a>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
   )
 }

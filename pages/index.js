@@ -66,7 +66,7 @@ export default function Home({ posts }) {
           healing, and harmony. <nobr className="lf">Love First</nobr> is the philosophy, coaching
           methodology, and all around way of life that has come out of this work.
         </p>
-        <p>Subscribe on Medium or for the newsletter to get updates 💖</p>
+        <p>Subscribe to the newsletter or follow on Medium to stay up to date 💖</p>
         {/* <p>
           <Link href="/about/a-better-world">Read my Vision For A Better World</Link>, and subscribe
           for updates below. 💖
