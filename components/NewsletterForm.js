@@ -72,7 +72,7 @@ const NewsletterForm = ({ title = 'The Newsletter' }) => {
       )} */}
       <div id="revue-embed">
         <form
-          action="http://newsletter.goinglovefirst.com/add_subscriber"
+          action="https://newsletter.goinglovefirst.com/add_subscriber"
           method="post"
           id="revue-form"
           name="revue-form"
