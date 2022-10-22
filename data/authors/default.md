@@ -20,6 +20,8 @@ instagram: https://instagram.com/KuraFire
 # And I never really stopped thinking about that.
 ---
 
+![[/authors/test.mdx]]
+
 Hi, my name is Faruk Ateş, and I’m a <nobr className="lf">Love First Person</nobr>. It’s like a regular person, but with the explicit statement of wanting to co-create _<nobr>A Better World</nobr>_ for all of us. It's a way of indicating that I am <em>Going Love First</em>, meaning I am committed to applying _<nobr>The Elemental Practices of Universal Love</nobr>_ every day, as best I can.
 
 I believe all people have a desire to make their lives easier and less complicated, and that with the right support, the right approach, and the right mindset, we can provide just that to anyone. Part of this journey is healing ourselves, often a necessary step before we can mend bridges with others.
