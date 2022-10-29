@@ -10,7 +10,7 @@ a {
   @apply transition-colors duration-100 ease-out;
 }
 nobr {
-  @apply lowercase text-slate-900 transition-colors duration-100;
+  @apply text-slate-900 transition-colors duration-100;
 
   &.lf {
     @apply font-medium capitalize text-pink-400;
