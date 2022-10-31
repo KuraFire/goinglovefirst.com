@@ -31,7 +31,7 @@ const NewsletterForm = ({ title = 'The Newsletter' }) => {
     inputEl.current.value = ''
     setError(false)
     setSubscribed(true)
-    setMessage('Successfully! 🎉  Remember to confirm your subscription!')
+    setMessage('Successfully subscribed! 🎉 Remember to confirm your subscription!')
   }
 
   return (
@@ -72,30 +72,39 @@ const NewsletterForm = ({ title = 'The Newsletter' }) => {
       )} */}
       <div id="revue-embed">
         <form
-          action="https://newsletter.goinglovefirst.com/add_subscriber"
-          method="post"
-          id="revue-form"
-          name="revue-form"
-          target="_blank"
+          // action="https://newsletter.goinglovefirst.com/add_subscriber"
+          // method="post"
+          // id="revue-form"
+          // name="revue-form"
+          // target="_blank"
+          onSubmit={subscribe}
         >
           <div className="mt-4 mb-2 flex -space-x-px text-small">
             <div className="revue-form-group relative w-1/2">
               <input
                 className="peer w-full rounded-l-md border-gray-400 text-small placeholder-transparent transition-all"
-                placeholder="Email address…"
+                // placeholder="Email address…"
+                placeholder={subscribed ? 'You’re subscribed!  🎉' : 'Email (required)'}
                 type="email"
-                name="member[email]"
-                id="member_email"
+                // getRevue's own form HTML:
+                // name="member[email]"
+                // id="member_email"
+                id="email-input"
+                name="email"
+                // Tailwind starter code:
+                ref={inputEl}
+                disabled={subscribed}
                 required
               />
               <label
                 htmlFor="member_email"
                 className="absolute left-2 -top-2.5 whitespace-nowrap bg-white px-1 text-xs text-gray-600 transition-all peer-placeholder-shown:top-2.5 peer-focus:-top-2.5 peer-focus:text-blue-600"
               >
-                Email address{' '}
+                Email ({' '}
                 <span title="Required field" className="required -ml-0.5 text-red-300">
-                  *
-                </span>
+                  required
+                </span>{' '}
+                )
               </label>
             </div>
             <div className="revue-form-group relative w-1/4">
@@ -135,7 +144,7 @@ const NewsletterForm = ({ title = 'The Newsletter' }) => {
           >
             <input
               type="submit"
-              value="Subscribe ♥"
+              value={subscribed ? 'Thank you!' : 'Subscribe ♥'}
               name="member[subscribe]"
               id="member_submit"
               className="inline-block rounded-md bg-pink-400 py-1.5 px-4 font-medium text-white shadow-sm shadow-pink-400/21 hover:bg-pink-700 focus:bg-pink-500 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-offset-2"
