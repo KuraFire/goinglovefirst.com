@@ -6,7 +6,10 @@ export default function SubscribeBoxes({ children }) {
     <div className="mx-1 mt-12 -mb-36 grid gap-8 md:mx-3 md:grid-cols-2">
       {/* <div className="mx-auto mt-12 -mb-36 grid max-w-lg gap-8 lg:-mx-24 lg:max-w-none lg:grid-cols-3"> */}
       {/* The Newsletter */}
-      <div className="group flex flex-col overflow-hidden rounded-lg shadow-lg transition duration-100 focus-within:scale-105 hover:scale-105">
+      <a
+        href="https://lovefirst.substack.com/"
+        className="group flex flex-col overflow-hidden rounded-lg shadow-lg transition duration-100 focus-within:scale-105 hover:scale-105"
+      >
         <picture className="flex-shrink-0">
           {/* <img className="h-48 w-full object-cover" src="/static/images/heart-mail.jpeg" alt="" /> */}
           <Image
@@ -19,11 +22,11 @@ export default function SubscribeBoxes({ children }) {
         </picture>
         <div className="flex flex-1 flex-col justify-between bg-white p-6">
           <div className="flex-1">
-            <p className="text-sm font-medium text-slate-400">your inbox</p>
+            <p className="text-sm font-medium text-slate-400">lovefirst.substack.com</p>
             <NewsletterForm />
           </div>
         </div>
-      </div>
+      </a>
 
       {/* The Publication */}
       <a

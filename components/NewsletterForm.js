@@ -37,8 +37,17 @@ const NewsletterForm = ({ title = 'The Newsletter' }) => {
   return (
     <div className="mt-2 block">
       <p className="text-xl font-semibold text-gray-900">{title}</p>
-      {/* <p className="my-3 text-base text-gray-500">Receive the latest updates in your inbox.</p> */}
-      <form className="mt-3 flex flex-col" onSubmit={subscribe}>
+      <p className="my-3 text-base text-gray-500">Receive the latest updates in your inbox.</p>
+      {/* <iframe
+        src="https://lovefirst.substack.com/embed"
+        width="480"
+        height="320"
+        style={{ border: '1px solid #fa1982', background: 'white' }}
+        frameborder="0"
+        scrolling="no"
+      ></iframe> */}
+
+      {/* <form className="mt-3 flex flex-col" onSubmit={subscribe}>
         <div>
           <label className="sr-only" htmlFor="email-input">
             Email address
@@ -69,7 +78,7 @@ const NewsletterForm = ({ title = 'The Newsletter' }) => {
       </form>
       {error && (
         <div className="w-72 pt-2 text-sm text-red-500 dark:text-red-400 sm:w-96">{message}</div>
-      )}
+      )} */}
     </div>
   )
 }
