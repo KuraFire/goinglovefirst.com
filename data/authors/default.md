@@ -18,9 +18,9 @@ instagram: https://instagram.com/KuraFire
 # _What drives people to be so hurtful to others? How could I help people so that they wouldn’t feel the need to do that?_
 
 # And I never really stopped thinking about that.
----
 
-![[/authors/test.mdx]]
+# ![[/authors/test.mdx]]
+---
 
 Hi, my name is Faruk Ateş, and I’m a <nobr className="lf">Love First Person</nobr>. It’s like a regular person, but with the explicit statement of wanting to co-create _<nobr>A Better World</nobr>_ for all of us. It's a way of indicating that I am <em>Going Love First</em>, meaning I am committed to applying _<nobr>The Elemental Practices of Universal Love</nobr>_ every day, as best I can.
 
